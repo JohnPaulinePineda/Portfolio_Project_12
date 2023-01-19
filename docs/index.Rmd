@@ -1531,6 +1531,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 | Model performance comparison:
 |
 | **[A]** Between models, the support vector machine - radial basis function kernel model demonstrated a more stable ROC Curve AUC metrics driven by the narrower interquartile range and 95% confidence interval, as compared to the regularized discriminant analysis model.
+|
 | **[B]** No statistically significant differences in the ROC Curve AUC metrics was observed between models and hyperparameter tuning strategies, although the  support vector machine - radial basis function kernel model SVM_R_MGS demonstrated the lowest p-values (between 0.10 to 0.14) when specifically compared to all regularized discriminant analysis models (RDA_MGS, RDA_AGS, RDA_ARS).
 |
 ```{r section_1.7, warning=FALSE, message=FALSE}
