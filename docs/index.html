@@ -533,7 +533,6 @@ applied in this study (mostly contained in the
 package) attempt to train the models sequentially by exploring various
 sets of hyperparameters to determine the best combination which
 optimizes model performance.<br />
-<br />
 </div>
 <div id="sample-data" class="section level2">
 <h2>1.1 Sample Data</h2>
@@ -7447,12 +7446,14 @@ similarities between the points in a high-dimensional feature space for
 improved discrimination.<br />
 <br />
 <a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Manual
-Grid Search</a> involves the explicit selection of model hyperparameter
-values to be assessed as influenced by human domain background and
-experience. Based on these hyperparameter settings, the model is trained
-with the performance measures evaluated. This process is repeated with
-another set of values for the same hyperparameters until optimal
-accuracy is achieved, or the model has attained minimal error.<br />
+Grid Search</a> involves the explicit selection of individual model
+hyperparameter values to be assessed as influenced by human domain
+background and experience. Based on these hyperparameter settings, the
+model is trained with the performance measures evaluated. This process
+is repeated with another set of values for the same hyperparameters
+until optimal accuracy is achieved, or the model has attained minimal
+error. While this process is practical in terms of computation power and
+time, it is highly dependent on human judgement.<br />
 <br />
 <strong>[A]</strong> The support vector machine (radial basis function
 kernel) model from the
@@ -7714,6 +7715,18 @@ kernel transformation by mapping non-linearly separable data using the
 similarities between the points in a high-dimensional feature space for
 improved discrimination.<br />
 <br />
+<a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Automated
+Grid Search</a> involves the selection of the range and interval of
+model hyperparameter values to be assessed based on the model default
+settings. Utilizing all the possible combinations of the hyperparameter
+values, the model is trained with the performance measures evaluated.
+This process is repeated with another set of values for the same
+hyperparameters until optimal accuracy is achieved, or the model has
+attained minimal error. While this process is extensive in terms of
+computation power and time, it is the most efficient method as there is
+the least possibility of missing out on an optimal solution for a
+model.<br />
+<br />
 <strong>[A]</strong> The support vector machine (radial basis function
 kernel) model from the
 <mark style="background-color: #CCECFF"><strong>kernlab</strong></mark>
@@ -7876,6 +7889,17 @@ and the closest data points from each class). The algorithm applies
 kernel transformation by mapping non-linearly separable data using the
 similarities between the points in a high-dimensional feature space for
 improved discrimination.<br />
+<br />
+<a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Automated
+Random Search</a> involves the selection of the range and interval of
+model hyperparameter values to be assessed based on the model default
+settings. Utilizing random combinations of the hyperparameter values,
+the model is trained with the performance measures evaluated. This
+process is repeated with another set of values for the same
+hyperparameters until optimal accuracy is achieved, or the model has
+attained minimal error. This process might be reasonably effective in
+terms of computation power and time, but may miss on a few combinations
+which could have been optimal ones.<br />
 <br />
 <strong>[A]</strong> The support vector machine (radial basis function
 kernel) model from the
@@ -8087,6 +8111,16 @@ between is a compromise between the two approaches, with the optimal
 hyperparameter value determined through cross-validation. Since RDA is a
 regularization technique, it is particularly useful when there are many
 features that are potentially correlated.<br />
+<br />
+<a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Manual
+Grid Search</a> involves the explicit selection of individual model
+hyperparameter values to be assessed as influenced by human domain
+background and experience. Based on these hyperparameter settings, the
+model is trained with the performance measures evaluated. This process
+is repeated with another set of values for the same hyperparameters
+until optimal accuracy is achieved, or the model has attained minimal
+error. While this process is practical in terms of computation power and
+time, it is highly dependent on human judgement.<br />
 <br />
 <strong>[A]</strong> The regularized discriminant analysis model from
 the <mark style="background-color: #CCECFF"><strong>klaR</strong></mark>
@@ -8310,6 +8344,18 @@ between is a compromise between the two approaches, with the optimal
 hyperparameter value determined through cross-validation. Since RDA is a
 regularization technique, it is particularly useful when there are many
 features that are potentially correlated.<br />
+<br />
+<a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Automated
+Grid Search</a> involves the selection of the range and interval of
+model hyperparameter values to be assessed based on the model default
+settings. Utilizing all the possible combinations of the hyperparameter
+values, the model is trained with the performance measures evaluated.
+This process is repeated with another set of values for the same
+hyperparameters until optimal accuracy is achieved, or the model has
+attained minimal error. While this process is extensive in terms of
+computation power and time, it is the most efficient method as there is
+the least possibility of missing out on an optimal solution for a
+model.<br />
 <br />
 <strong>[A]</strong> The regularized discriminant analysis model from
 the <mark style="background-color: #CCECFF"><strong>klaR</strong></mark>
@@ -8589,6 +8635,17 @@ two approaches, with the optimal hyperparameter value determined through
 cross-validation. Since RDA is a regularization technique, it is
 particularly useful when there are many features that are potentially
 correlated.<br />
+<br />
+<a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Automated
+Random Search</a> involves the selection of the range and interval of
+model hyperparameter values to be assessed based on the model default
+settings. Utilizing random combinations of the hyperparameter values,
+the model is trained with the performance measures evaluated. This
+process is repeated with another set of values for the same
+hyperparameters until optimal accuracy is achieved, or the model has
+attained minimal error. This process might be reasonably effective in
+terms of computation power and time, but may miss on a few combinations
+which could have been optimal ones.<br />
 <br />
 <strong>[A]</strong> The regularized discriminant analysis model from
 the <mark style="background-color: #CCECFF"><strong>klaR</strong></mark>
