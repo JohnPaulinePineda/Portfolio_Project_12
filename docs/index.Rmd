@@ -1654,6 +1654,7 @@ bwplot(ResamplingDifferences,
 | **[Article]** [Hyperparameter Tuning](https://www.geeksforgeeks.org/hyperparameter-tuning/) by Tarandeep Singh
 | **[Article]** [Hyperparameter Optimization Techniques to Improve Your Machine Learning Model's Performance](https://www.freecodecamp.org/news/hyperparameter-optimization-techniques-machine-learning/) by Davis David
 | **[Article]** [What Is Hyperparameter Tuning?](https://aws.amazon.com/what-is/hyperparameter-tuning/) by AWS Team
+| **[Article]** [Hyperparameter Tuning in Python: a Complete Guide](https://neptune.ai/blog/hyperparameter-tuning-in-python-complete-guide#:~:text=Hyperparameter%20tuning%20%28or%20hyperparameter%20optimization%29%20is%20the%20process,running%20multiple%20trials%20in%20a%20single%20training%20process.) by Shahul ES and Aayush Bajaj
 | **[Article]** [Lattice Graphs](http://www.sthda.com/english/wiki/lattice-graphs) by Alboukadel Kassambara
 | **[Article]** [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) by Jason Brownlee
 | **[Article]** [Decision Tree Algorithm Examples In Data Mining](https://www.softwaretestinghelp.com/decision-tree-algorithm-examples-data-mining/) by Software Testing Help Team
