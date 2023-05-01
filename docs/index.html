@@ -518,6 +518,22 @@ This document presents a non-exhaustive list of evaluation techniques
 for hyperparameter tuning strategies and resampling distributions using
 various helpful packages in
 <mark style="background-color: #CCECFF"><strong>R</strong></mark>.<br />
+<br />
+Hyperparameter tuning is the process of determining the optimal
+combination of hyperparameter values that maximizes the model
+performance by running multiple trials in a single training process.
+Hyperparameters refer to external configuration variables that are used
+to control the learning process and have a significant effect on the
+performance of machine learning models but are fixed and cannot be
+directly learned from the regular training process. Machine learning
+models can have one to several hyperparameters and finding the best
+combination can be treated as a search problem. The search algorithms
+applied in this study (mostly contained in the
+<mark style="background-color: #CCECFF"><strong>caret</strong></mark>
+package) attempt to train the models sequentially by exploring various
+sets of hyperparameters to determine the best combination which
+optimizes model performance.<br />
+<br />
 </div>
 <div id="sample-data" class="section level2">
 <h2>1.1 Sample Data</h2>
@@ -9083,6 +9099,11 @@ Data Visualization with R</a> by Deepayan Sarkar<br />
 Learning</a> by Samuel Jackson<br />
 <strong>[Book]</strong> <a href="https://bookdown.org/larget_jacob/data-modeling-methods/">Data
 Modeling Methods</a> by Jacob Larget<br />
+<strong>[Book]</strong> <a href="https://link.springer.com/book/10.1007/978-981-19-5170-1">Hyperparameter
+Tuning for Machine and Deep Learning with R</a> by Eva Bartz, Thomas
+Bartz-Beielstein, Martin Zaefferer and Olaf Mersmann<br />
+<strong>[Book]</strong> <a href="https://link.springer.com/book/10.1007/978-1-4842-6579-6">Hyperparameter
+Optimization in Machine Learning</a> by Tanay Agrawal<br />
 <strong>[R Package]</strong> <a href="https://cran.r-project.org/web//packages/AppliedPredictiveModeling/AppliedPredictiveModeling.pdf">AppliedPredictiveModeling</a>
 by Max Kuhn<br />
 <strong>[R Package]</strong> <a href="https://topepo.github.io/caret/index.html">caret</a> by Max
@@ -9151,6 +9172,15 @@ Prabhakaran<br />
 <strong>[Article]</strong> <a href="https://machinelearningmastery.com/tuning-machine-learning-models-using-the-caret-r-package/">Tuning
 Machine Learning Models Using the Caret R Package</a> by Jason
 Brownlee<br />
+<strong>[Article]</strong> <a href="https://www.mygreatlearning.com/blog/hyperparameter-tuning-explained/">Hyperparameter
+Tuning for Machine Learning Explained</a> by Great Learning Team<br />
+<strong>[Article]</strong> <a href="https://www.geeksforgeeks.org/hyperparameter-tuning/">Hyperparameter
+Tuning</a> by Tarandeep Singh<br />
+<strong>[Article]</strong> <a href="https://www.freecodecamp.org/news/hyperparameter-optimization-techniques-machine-learning/">Hyperparameter
+Optimization Techniques to Improve Your Machine Learning Model’s
+Performance</a> by Davis David<br />
+<strong>[Article]</strong> <a href="https://aws.amazon.com/what-is/hyperparameter-tuning/">What Is
+Hyperparameter Tuning?</a> by AWS Team<br />
 <strong>[Article]</strong> <a href="http://www.sthda.com/english/wiki/lattice-graphs">Lattice
 Graphs</a> by Alboukadel Kassambara<br />
 <strong>[Article]</strong> <a href="https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/">A
@@ -9205,12 +9235,6 @@ Quadratic, and Regularized Discriminant Analysis</a> by Data Science
 Blog Team<br />
 <strong>[Article]</strong> <a href="https://data-farmers.github.io/2019-06-25-Regularized-Discriminant-Analysis/">Regularized
 Discriminant Analysis</a> by Data Farmers<br />
-<strong>[Article]</strong> <a href="https://www.geeksforgeeks.org/regularized-discriminant-analysis/">Regularized
-Discriminant Analysis</a> by Geeks For Geeks Team<br />
-<strong>[Article]</strong> <a href="https://www.geeksforgeeks.org/regularized-discriminant-analysis/">Regularized
-Discriminant Analysis</a> by Geeks For Geeks Team<br />
-<strong>[Article]</strong> <a href="https://www.geeksforgeeks.org/regularized-discriminant-analysis/">Regularized
-Discriminant Analysis</a> by Geeks For Geeks Team<br />
 <strong>[Publication]</strong> <a href="http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf">Support
 Vector Regression Machines</a> by Harris Drucker, Chris Burges, Linda
 Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information

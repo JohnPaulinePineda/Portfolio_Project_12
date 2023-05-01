@@ -16,7 +16,10 @@ knitr::opts_chunk$set(echo = TRUE, fig.width=15, fig.height=10)
 ```
 # **1. Table of Contents**
 |
-| This document presents a non-exhaustive list of evaluation techniques for hyperparameter tuning strategies and resampling distributions using various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>.    
+| This document presents a non-exhaustive list of evaluation techniques for hyperparameter tuning strategies and resampling distributions using various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>.
+|
+| Hyperparameter tuning is the process of determining the optimal combination of hyperparameter values that maximizes the model performance by running multiple trials in a single training process. Hyperparameters refer to external configuration variables that are used to control the learning process and have a significant effect on the performance of machine learning models but are fixed and cannot be directly learned from the regular training process. Machine learning models can have one to several hyperparameters and finding the best combination can be treated as a search problem. The search algorithms applied in this study (mostly contained in the <mark style="background-color: #CCECFF">**caret**</mark> package) attempt to train the models sequentially by exploring various sets of hyperparameters to determine the best combination which optimizes model performance.
+|
 |
 ##  1.1 Sample Data
 |
@@ -1602,6 +1605,8 @@ bwplot(ResamplingDifferences,
 | **[Book]** [Multivariate Data Visualization with R](http://lmdvr.r-forge.r-project.org/figures/figures.html) by Deepayan Sarkar
 | **[Book]** [Machine Learning](https://bookdown.org/ssjackson300/Machine-Learning-Lecture-Notes/) by Samuel Jackson
 | **[Book]** [Data Modeling Methods](https://bookdown.org/larget_jacob/data-modeling-methods/) by Jacob Larget
+| **[Book]** [Hyperparameter Tuning for Machine and Deep Learning with R](https://link.springer.com/book/10.1007/978-981-19-5170-1) by Eva Bartz, Thomas Bartz-Beielstein, Martin Zaefferer and Olaf Mersmann
+| **[Book]** [Hyperparameter Optimization in Machine Learning](https://link.springer.com/book/10.1007/978-1-4842-6579-6) by Tanay Agrawal
 | **[R Package]** [AppliedPredictiveModeling](https://cran.r-project.org/web//packages/AppliedPredictiveModeling/AppliedPredictiveModeling.pdf) by Max Kuhn
 | **[R Package]** [caret](https://topepo.github.io/caret/index.html) by Max Kuhn
 | **[R Package]** [rpart](https://mran.microsoft.com/web/packages/rpart/rpart.pdf) by Terry Therneau and Beth Atkinson
@@ -1634,6 +1639,10 @@ bwplot(ResamplingDifferences,
 | **[Article]** [A Short Introduction to the caret Package](https://cran.r-project.org/web/packages/caret/vignettes/caret.html) by Max Kuhn
 | **[Article]** [Caret Package – A Practical Guide to Machine Learning in R](https://www.machinelearningplus.com/machine-learning/caret-package/#:~:text=Caret%20is%20short%20for%20Classification%20And%20REgression%20Training.,track%20of%20which%20algorithm%20resides%20in%20which%20package.) by Selva Prabhakaran
 | **[Article]** [Tuning Machine Learning Models Using the Caret R Package](https://machinelearningmastery.com/tuning-machine-learning-models-using-the-caret-r-package/) by Jason Brownlee
+| **[Article]** [Hyperparameter Tuning for Machine Learning Explained](https://www.mygreatlearning.com/blog/hyperparameter-tuning-explained/) by Great Learning Team
+| **[Article]** [Hyperparameter Tuning](https://www.geeksforgeeks.org/hyperparameter-tuning/) by Tarandeep Singh
+| **[Article]** [Hyperparameter Optimization Techniques to Improve Your Machine Learning Model's Performance](https://www.freecodecamp.org/news/hyperparameter-optimization-techniques-machine-learning/) by Davis David
+| **[Article]** [What Is Hyperparameter Tuning?](https://aws.amazon.com/what-is/hyperparameter-tuning/) by AWS Team
 | **[Article]** [Lattice Graphs](http://www.sthda.com/english/wiki/lattice-graphs) by Alboukadel Kassambara
 | **[Article]** [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) by Jason Brownlee
 | **[Article]** [Decision Tree Algorithm Examples In Data Mining](https://www.softwaretestinghelp.com/decision-tree-algorithm-examples-data-mining/) by Software Testing Help Team
@@ -1658,9 +1667,6 @@ bwplot(ResamplingDifferences,
 | **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
 | **[Article]** [Linear, Quadratic, and Regularized Discriminant Analysis](https://www.datascienceblog.net/post/machine-learning/linear-discriminant-analysis/#:~:text=Linear%20discriminant%20analysis%20%28LDA%29%20is%20particularly%20popular%20because,%28RDA%29%20is%20a%20compromise%20between%20LDA%20and%20QDA.) by Data Science Blog Team
 | **[Article]** [Regularized Discriminant Analysis](https://data-farmers.github.io/2019-06-25-Regularized-Discriminant-Analysis/) by Data Farmers
-| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
-| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
-| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Publication]** [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) by Jerome Friedman (Journal of the American Statistical Association)
 | **[Course]** [Applied Data Mining and Statistical Learning](https://online.stat.psu.edu/stat508/) by Penn State Eberly College of Science
