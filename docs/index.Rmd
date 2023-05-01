@@ -1169,6 +1169,8 @@ SVM_R_Test_RandomSearch_Auto_ROC <- roc(response = SVM_R_Test_RandomSearch_Auto$
 
 ###  1.5.4 Regularized Discriminant Analysis - Manual Grid Search (RDA_MGS)
 |
+| [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. RDA introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
+|
 | **[A]** The regularized discriminant analysis model from the  <mark style="background-color: #CCECFF">**klaR**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -1269,6 +1271,8 @@ RDA_Test_GridSearch_Manual_ROC <- roc(response = RDA_Test_GridSearch_Manual$RDA_
 
 ###  1.5.5 Regularized Discriminant Analysis - Automated Grid Search (RDA_AGS)
 |
+| [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. RDA introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
+|
 | **[A]** The regularized discriminant analysis model from the  <mark style="background-color: #CCECFF">**klaR**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -1330,6 +1334,8 @@ RDA_Test_GridSearch_Auto_ROC <- roc(response = RDA_Test_GridSearch_Auto$RDA_Obse
 ```
 
 ###  1.5.6 Regularized Discriminant Analysis - Automated Random Search (RDA_ARS)
+|
+| [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. RDA introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
 |
 | **[A]** The regularized discriminant analysis model from the  <mark style="background-color: #CCECFF">**klaR**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
@@ -1649,6 +1655,11 @@ bwplot(ResamplingDifferences,
 | **[Article]** [Generalized Boosting Model](https://support.bccvl.org.au/support/solutions/articles/6000083212-generalized-boosting-model) by BCCVL Team
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
+| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
+| **[Article]** [Linear, Quadratic, and Regularized Discriminant Analysis](https://www.datascienceblog.net/post/machine-learning/linear-discriminant-analysis/#:~:text=Linear%20discriminant%20analysis%20%28LDA%29%20is%20particularly%20popular%20because,%28RDA%29%20is%20a%20compromise%20between%20LDA%20and%20QDA.) by Data Science Blog Team
+| **[Article]** [Regularized Discriminant Analysis](https://data-farmers.github.io/2019-06-25-Regularized-Discriminant-Analysis/) by Data Farmers
+| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
+| **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
 | **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
 | **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Publication]** [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) by Jerome Friedman (Journal of the American Statistical Association)
