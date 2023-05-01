@@ -922,6 +922,8 @@ featurePlot(x = EDA.Predictors.Numeric,
 ## 1.5 Predictive Model Development and Hyperparameter Tuning
 ###  1.5.1 Support Vector Machine - Radial Basis Function Kernel - Manual Grid Search (SVM_R_MGS)
 |
+| [Support Vector Machine](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
+|
 | **[A]** The support vector machine (radial basis function kernel) model from the  <mark style="background-color: #CCECFF">**kernlab**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -1036,6 +1038,8 @@ SVM_R_Test_GridSearch_Manual_ROC <- roc(response = SVM_R_Test_GridSearch_Manual$
 
 ###  1.5.2 Support Vector Machine - Radial Basis Function Kernel - Automated Grid Search (SVM_R_AGS)
 |
+| [Support Vector Machine](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
+|
 | **[A]** The support vector machine (radial basis function kernel) model from the  <mark style="background-color: #CCECFF">**kernlab**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
 | **[B]** The model contains 2 hyperparameters:
@@ -1098,6 +1102,8 @@ SVM_R_Test_GridSearch_Auto_ROC <- roc(response = SVM_R_Test_GridSearch_Auto$SVM_
 ```
 
 ###  1.5.3 Support Vector Machine - Radial Basis Function Kernel - Automated Random Search (SVM_R_ARS)
+|
+| [Support Vector Machine](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
 |
 | **[A]** The support vector machine (radial basis function kernel) model from the  <mark style="background-color: #CCECFF">**kernlab**</mark> package was implemented through the <mark style="background-color: #CCECFF">**caret**</mark> package. 
 |
@@ -1644,6 +1650,7 @@ bwplot(ResamplingDifferences,
 | **[Article]** [C5.0: An Informal Tutorial](https://www.rulequest.com/see5-unix.html) by RuleQuest Team
 | **[Article]** [What is Nearest Shrunken Centroid Classification?](https://www.tibshirani.su.domains/PAM/Rdist/howwork.html) by Rob Tibshirani
 | **[Article]** [Regularized Discriminant Analysis](https://www.geeksforgeeks.org/regularized-discriminant-analysis/) by Geeks For Geeks Team
+| **[Publication]** [Support Vector Regression Machines](http://www.cs.cmu.edu/~pakyan/compbio/references/Drucker_NIPS_1996.pdf) by Harris Drucker, Chris Burges, Linda Kaufman, Alex Smola and Vladimir Vapnik (Advances in Neural Information Processing Systems)
 | **[Course]** [Applied Data Mining and Statistical Learning](https://online.stat.psu.edu/stat508/) by Penn State Eberly College of Science
 | **[Course]** [Regression Methods](https://online.stat.psu.edu/stat501/) by Penn State Eberly College of Science
 | **[Course]** [Applied Regression Analysis](https://online.stat.psu.edu/stat462/) by Penn State Eberly College of Science
