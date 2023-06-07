@@ -514,10 +514,20 @@ References</strong></a></li>
 <div id="table-of-contents" class="section level1">
 <h1><strong>1. Table of Contents</strong></h1>
 <div class="line-block"><br />
-This document presents a non-exhaustive list of evaluation techniques
-for hyperparameter tuning strategies and resampling distributions using
+This project implements different evaluation procedures for
+hyperparameter tuning strategies and resampling distributions using
 various helpful packages in
-<mark style="background-color: #CCECFF"><strong>R</strong></mark>.<br />
+<mark style="background-color: #CCECFF"><strong>R</strong></mark>. Using
+<strong>Support Vector Machine</strong> and <strong>Regularized
+Discriminant Analysis</strong> model structures, methods applied in the
+analysis to implement hyperparameter tuning included the <strong>Manual
+Grid Search</strong>, <strong>Automated Grid Search</strong> and
+<strong>Automated Random Search</strong> with the hyperparameter
+selection process illustrated for each. The resulting predictions
+derived from the candidate models applying various hyperparameter tuning
+procedures were evaluated in terms of their discrimination power using
+the receiver operating characteristic (ROC) curve area under the curve
+(AUC) metric.<br />
 <br />
 Hyperparameter tuning is the process of determining the optimal
 combination of hyperparameter values that maximizes the model
@@ -8850,14 +8860,16 @@ Model performance comparison:<br />
 <br />
 <strong>[A]</strong> The models which demonstrated the best and most
 consistent ROC Curve AUC metrics are as follows:<br />
-     <strong>[A.1]</strong> SVM_R_MGS: Support Vector Machine - Radial
-Basis Function Kernel with Manual Grid Search-Tuned Hyperparameters
+     <strong>[A.1]</strong> Hyperparameters tuned using
+<strong>SVM_R_MGS: Support Vector Machine - Radial Basis Function Kernel
+- Manual Grid Search</strong>
 (<mark style="background-color: #CCECFF"><strong>kernlab</strong></mark>
 packages)<br />
             <strong>[A.1.1]</strong> Cross-Validation ROC Curve AUC =
 0.96629, Test ROC Curve AUC = 0.93780<br />
-     <strong>[A.2]</strong> SVM_R_ARS: Support Vector Machine - Radial
-Basis Function Kernel with Automated Random Search-Tuned Hyperparameters
+     <strong>[A.2]</strong> Hyperparameters tuned using
+<strong>SVM_R_ARS: Support Vector Machine - Radial Basis Function Kernel
+- Automated Random Search</strong>
 (<mark style="background-color: #CCECFF"><strong>kernlab</strong></mark>
 packages)<br />
             <strong>[A.2.1]</strong> Cross-Validation ROC Curve AUC =
@@ -9007,18 +9019,22 @@ packages)<br />
 <div class="line-block"><br />
 Model performance comparison:<br />
 <br />
-<strong>[A]</strong> Between models, the support vector machine - radial
-basis function kernel model demonstrated a more stable ROC Curve AUC
-metrics driven by the narrower interquartile range and 95% confidence
-interval, as compared to the regularized discriminant analysis
-model.<br />
+<strong>[A]</strong> Between models, the <strong>Support Vector Machine
+- Radial Basis Function Kernel</strong> model demonstrated a more stable
+ROC Curve AUC metrics driven by the narrower interquartile range and 95%
+confidence interval, as compared to the <strong>Regularized Discriminant
+Analysis</strong> model.<br />
 <br />
 <strong>[B]</strong> No statistically significant differences in the ROC
-Curve AUC metrics was observed between models and hyperparameter tuning
-strategies, although the support vector machine - radial basis function
-kernel model SVM_R_MGS demonstrated the lowest p-values (between 0.10 to
-0.14) when specifically compared to all regularized discriminant
-analysis models (RDA_MGS, RDA_AGS, RDA_ARS).<br />
+Curve AUC metrics were observed between models and hyperparameter tuning
+strategies, although the <strong>SVM_R_MGS: Support Vector Machine -
+Radial Basis Function Kernel - Manual Grid Search</strong> model
+demonstrated the lowest p-values (between 0.10 to 0.14) when
+specifically compared to the <strong>RDA_MGS: Regularized Discriminant
+Analysis - Manual Grid Search</strong>, <strong>RDA_AGS: Regularized
+Discriminant Analysis - Automated Grid Search</strong> and
+<strong>RDA_ARS: Regularized Discriminant Analysis - Automated Random
+Search</strong> models.<br />
 </div>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="do">##################################</span></span>
 <span id="cb143-2"><a href="#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Consolidating the resampling results</span></span>

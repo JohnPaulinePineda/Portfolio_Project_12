@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.width=15, fig.height=10)
 ```
 # **1. Table of Contents**
 |
-| This document presents a non-exhaustive list of evaluation techniques for hyperparameter tuning strategies and resampling distributions using various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>.
+| This project implements different evaluation procedures for hyperparameter tuning strategies and resampling distributions using various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>. Using **Support Vector Machine** and **Regularized Discriminant Analysis** model structures, methods applied in the analysis to implement hyperparameter tuning included the **Manual Grid Search**, **Automated Grid Search** and **Automated Random Search** with the hyperparameter selection process illustrated for each. The resulting predictions derived from the candidate models applying various hyperparameter tuning procedures were evaluated in terms of their discrimination power using the receiver operating characteristic (ROC) curve area under the curve (AUC) metric.
 |
 | Hyperparameter tuning is the process of determining the optimal combination of hyperparameter values that maximizes the model performance by running multiple trials in a single training process. Hyperparameters refer to external configuration variables that are used to control the learning process and have a significant effect on the performance of machine learning models but are fixed and cannot be directly learned from the regular training process. Machine learning models can have one to several hyperparameters and finding the best combination can be treated as a search problem. The search algorithms applied in this study (mostly contained in the <mark style="background-color: #CCECFF">**caret**</mark> package) attempt to train the models sequentially by exploring various sets of hyperparameters to determine the best combination which optimizes model performance.
 |
@@ -1416,9 +1416,9 @@ RDA_Test_RandomSearch_Auto_ROC <- roc(response = RDA_Test_RandomSearch_Auto$RDA_
 | Model performance comparison:
 |
 | **[A]** The models which demonstrated the best and most consistent ROC Curve AUC metrics are as follows:
-|      **[A.1]** SVM_R_MGS: Support Vector Machine - Radial Basis Function Kernel with Manual Grid Search-Tuned Hyperparameters (<mark style="background-color: #CCECFF">**kernlab**</mark> packages)
+|      **[A.1]** Hyperparameters tuned using **SVM_R_MGS: Support Vector Machine - Radial Basis Function Kernel - Manual Grid Search** (<mark style="background-color: #CCECFF">**kernlab**</mark> packages)
 |             **[A.1.1]** Cross-Validation ROC Curve AUC = 0.96629, Test ROC Curve AUC = 0.93780 
-|      **[A.2]** SVM_R_ARS: Support Vector Machine - Radial Basis Function Kernel with Automated Random Search-Tuned Hyperparameters (<mark style="background-color: #CCECFF">**kernlab**</mark> packages)
+|      **[A.2]** Hyperparameters tuned using **SVM_R_ARS: Support Vector Machine - Radial Basis Function Kernel - Automated Random Search** (<mark style="background-color: #CCECFF">**kernlab**</mark> packages)
 |             **[A.2.1]** Cross-Validation ROC Curve AUC = 0.96213, Test ROC Curve AUC = 0.93541 
 |
 ```{r section_1.6, warning=FALSE, message=FALSE}
@@ -1556,9 +1556,9 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 |
 | Model performance comparison:
 |
-| **[A]** Between models, the support vector machine - radial basis function kernel model demonstrated a more stable ROC Curve AUC metrics driven by the narrower interquartile range and 95% confidence interval, as compared to the regularized discriminant analysis model.
+| **[A]** Between models, the **Support Vector Machine - Radial Basis Function Kernel** model demonstrated a more stable ROC Curve AUC metrics driven by the narrower interquartile range and 95% confidence interval, as compared to the **Regularized Discriminant Analysis** model.
 |
-| **[B]** No statistically significant differences in the ROC Curve AUC metrics was observed between models and hyperparameter tuning strategies, although the  support vector machine - radial basis function kernel model SVM_R_MGS demonstrated the lowest p-values (between 0.10 to 0.14) when specifically compared to all regularized discriminant analysis models (RDA_MGS, RDA_AGS, RDA_ARS).
+| **[B]** No statistically significant differences in the ROC Curve AUC metrics were observed between models and hyperparameter tuning strategies, although the **SVM_R_MGS: Support Vector Machine - Radial Basis Function Kernel - Manual Grid Search** model demonstrated the lowest p-values (between 0.10 to 0.14) when specifically compared to the **RDA_MGS: Regularized Discriminant Analysis - Manual Grid Search**, **RDA_AGS: Regularized Discriminant Analysis - Automated Grid Search** and **RDA_ARS: Regularized Discriminant Analysis - Automated Random Search** models.
 |
 ```{r section_1.7, warning=FALSE, message=FALSE}
 ##################################
