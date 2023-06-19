@@ -1082,7 +1082,8 @@ SVM_R_Tune_GridSearch_Manual$results
 # Reporting the cross-validation results
 # for the train set
 ##################################
-(SVM_R_Train_GridSearch_Manual_ROCCurveAUC <- SVM_R_Tune_GridSearch_Manual$results[SVM_R_Tune_GridSearch_Manual$results$C==SVM_R_Tune_GridSearch_Manual$bestTune$C &                                                                                 SVM_R_Tune_GridSearch_Manual$results$sigma==SVM_R_Tune_GridSearch_Manual$bestTune$sigma,
+(SVM_R_Train_GridSearch_Manual_ROCCurveAUC <- SVM_R_Tune_GridSearch_Manual$results[SVM_R_Tune_GridSearch_Manual$results$C==SVM_R_Tune_GridSearch_Manual$bestTune$C &
+                                                                                     SVM_R_Tune_GridSearch_Manual$results$sigma==SVM_R_Tune_GridSearch_Manual$bestTune$sigma,
                                                                                c("ROC")])
 
 ##################################
@@ -1155,7 +1156,8 @@ SVM_R_Tune_GridSearch_Auto$results
 # Reporting the cross-validation results
 # for the train set
 ##################################
-(SVM_R_Train_GridSearch_Auto_ROCCurveAUC <- SVM_R_Tune_GridSearch_Auto$results[SVM_R_Tune_GridSearch_Auto$results$C==SVM_R_Tune_GridSearch_Auto$bestTune$C &                                                                                 SVM_R_Tune_GridSearch_Auto$results$sigma==SVM_R_Tune_GridSearch_Auto$bestTune$sigma,
+(SVM_R_Train_GridSearch_Auto_ROCCurveAUC <- SVM_R_Tune_GridSearch_Auto$results[SVM_R_Tune_GridSearch_Auto$results$C==SVM_R_Tune_GridSearch_Auto$bestTune$C &
+                                                                                 SVM_R_Tune_GridSearch_Auto$results$sigma==SVM_R_Tune_GridSearch_Auto$bestTune$sigma,
                                                                                c("ROC")])
 
 ##################################
@@ -1227,7 +1229,8 @@ SVM_R_Tune_RandomSearch_Auto$results
 # Reporting the cross-validation results
 # for the train set
 ##################################
-(SVM_R_Train_RandomSearch_Auto_ROCCurveAUC <- SVM_R_Tune_RandomSearch_Auto$results[SVM_R_Tune_RandomSearch_Auto$results$C==SVM_R_Tune_RandomSearch_Auto$bestTune$C &                                                                                 SVM_R_Tune_RandomSearch_Auto$results$sigma==SVM_R_Tune_RandomSearch_Auto$bestTune$sigma,
+(SVM_R_Train_RandomSearch_Auto_ROCCurveAUC <- SVM_R_Tune_RandomSearch_Auto$results[SVM_R_Tune_RandomSearch_Auto$results$C==SVM_R_Tune_RandomSearch_Auto$bestTune$C &
+                                                                                     SVM_R_Tune_RandomSearch_Auto$results$sigma==SVM_R_Tune_RandomSearch_Auto$bestTune$sigma,
                                                                                c("ROC")])
 
 ##################################
@@ -1338,7 +1341,8 @@ RDA_Tune_GridSearch_Manual$results
 # Reporting the cross-validation results
 # for the train set
 ##################################
-(RDA_Train_GridSearch_Manual_ROCCurveAUC <- RDA_Tune_GridSearch_Manual$results[RDA_Tune_GridSearch_Manual$results$gamma==RDA_Tune_GridSearch_Manual$bestTune$gamma &                                                                               RDA_Tune_GridSearch_Manual$results$lambda==RDA_Tune_GridSearch_Manual$bestTune$lambda,
+(RDA_Train_GridSearch_Manual_ROCCurveAUC <- RDA_Tune_GridSearch_Manual$results[RDA_Tune_GridSearch_Manual$results$gamma==RDA_Tune_GridSearch_Manual$bestTune$gamma &
+                                                                                 RDA_Tune_GridSearch_Manual$results$lambda==RDA_Tune_GridSearch_Manual$bestTune$lambda,
                                                                                c("ROC")])
 
 ##################################
@@ -1481,7 +1485,8 @@ RDA_Tune_RandomSearch_Auto$results
 # Reporting the cross-validation results
 # for the train set
 ##################################
-(RDA_Train_RandomSearch_Auto_ROCCurveAUC <- RDA_Tune_RandomSearch_Auto$results[RDA_Tune_RandomSearch_Auto$results$gamma==RDA_Tune_RandomSearch_Auto$bestTune$gamma &                                                                               RDA_Tune_RandomSearch_Auto$results$lambda==RDA_Tune_RandomSearch_Auto$bestTune$lambda,
+(RDA_Train_RandomSearch_Auto_ROCCurveAUC <- RDA_Tune_RandomSearch_Auto$results[RDA_Tune_RandomSearch_Auto$results$gamma==RDA_Tune_RandomSearch_Auto$bestTune$gamma &
+                                                                                 RDA_Tune_RandomSearch_Auto$results$lambda==RDA_Tune_RandomSearch_Auto$bestTune$lambda,
                                                                                c("ROC")])
 
 ##################################
