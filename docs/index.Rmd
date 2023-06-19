@@ -36,6 +36,9 @@ knitr::opts_chunk$set(echo = TRUE, fig.width=15, fig.height=10)
 |      **[B.2]** 60/61 predictors = All remaining variables (60/60 numeric)
 |     
 | 
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.1, warning=FALSE, message=FALSE}
 ##################################
 # Loading R libraries
@@ -108,6 +111,9 @@ PDA <- Sonar_Train
 )
 
 ```
+
+</details>
+
 ##  1.2 Data Quality Assessment
 |
 | Data quality assessment:
@@ -128,6 +134,10 @@ PDA <- Sonar_Train
 |
 | **[D]** No high skewness noted for any variable with Skewness>3 or Skewness<(-3).
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.2, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -344,6 +354,9 @@ if (length(names(DQA.Predictors.Numeric))==0) {
 }
 
 ```
+
+</details>
+
 ##  1.3 Data Preprocessing
 
 ###  1.3.1 Outlier
@@ -391,6 +404,10 @@ if (length(names(DQA.Predictors.Numeric))==0) {
 |      **[A.38]** <span style="color: #FF0000">V59</span> variable (12 outliers detected)
 |      **[A.39]** <span style="color: #FF0000">V60</span> variable (5 outliers detected)
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.1, warning=FALSE, message=FALSE, fig.width=15, fig.height=3}
 ##################################
 # Loading dataset
@@ -441,6 +458,9 @@ print(paste0(NumericPredictorWithOutlierCount, " numeric variable(s) were noted 
 dim(DPA.Predictors.Numeric)
 
 ```
+
+</details>
+
 ###  1.3.2 Zero and Near-Zero Variance
 |
 | Zero and near-zero variance data assessment:
@@ -449,6 +469,10 @@ dim(DPA.Predictors.Numeric)
 |
 | **[B]** No low variance noted for any variables using a preprocessing summary from the <mark style="background-color: #CCECFF">**caret**</mark> package. The <span style="color: #0000FF">nearZeroVar</span> method using both the <span style="color: #0000FF">freqCut</span> and <span style="color: #0000FF">uniqueCut</span> criteria set at 95/5 and 10, respectively, were applied on the dataset.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.2, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -515,12 +539,19 @@ if ((nrow(DPA_LowVariance[DPA_LowVariance$nzv,]))==0){
 } 
 
 ```
+
+</details>
+
 ###  1.3.3 Collinearity
 |
 | High collinearity data assessment:
 |
 | **[A]** No high correlation > 95% were noted for any variable as confirmed using the preprocessing summaries from the <mark style="background-color: #CCECFF">**caret**</mark> and <mark style="background-color: #CCECFF">**lares**</mark> packages.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.3, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -621,12 +652,19 @@ if (DPA_HighlyCorrelatedCount > 0) {
 }
 
 ```
+
+</details>
+
 ###  1.3.4 Linear Dependencies
 |
 | Linear dependency data assessment:
 |
 | **[A]** No linear dependencies noted for any subset of variables using the preprocessing summary from the <mark style="background-color: #CCECFF">**caret**</mark> package applying the <span style="color: #0000FF">findLinearCombos</span> method which utilizes the QR decomposition of a matrix to enumerate sets of linear combinations (if they exist). 
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.4, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -714,12 +752,18 @@ if (DPA_LinearlyDependentCount > 0) {
 
 ```
 
+</details>
+
 ###  1.3.5 Shape Transformation
 |
 | Data transformation assessment:
 |
 | **[A]** A number of numeric variables in the dataset were observed to be right-skewed which required shape transformation for data distribution stability. Considering that all numeric variables were strictly positive values, the <span style="color: #0000FF">BoxCox</span> method from the <mark style="background-color: #CCECFF">**caret**</mark> package was used to transform their distributional shapes.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.5, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -754,12 +798,18 @@ dim(DPA_BoxCoxTransformed)
 
 ```
 
+</details>
+
 ###  1.3.6 Centering and Scaling
 |
 | Centering and scaling data assessment:
 |
 | **[A]** To maintain numerical stability during modelling, centering and scaling transformations were applied on the transformed numeric variables. The <span style="color: #0000FF">center</span> method from the <mark style="background-color: #CCECFF">**caret**</mark> package was implemented which subtracts the average value of a numeric variable to all the values. As a result of centering, the variables had zero mean values. In addition, the <span style="color: #0000FF">scale</span> method, also from the <mark style="background-color: #CCECFF">**caret**</mark> package, was applied which performs a center transformation with each value of the variable divided by its standard deviation. Scaling the data coerced the values to have a common standard deviation of one.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.6, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -800,6 +850,8 @@ dim(DPA.Predictors.Numeric_BoxCoxTransformed_CenteredScaledTransformed)
 
 ```
 
+</details>
+
 ###  1.3.7 Pre-Processed Dataset
 |
 | Preliminary dataset assessment:
@@ -820,6 +872,10 @@ dim(DPA.Predictors.Numeric_BoxCoxTransformed_CenteredScaledTransformed)
 |      **[C.4]** No predictors removed due to high correlation
 |      **[C.5]** No predictors removed due to linear dependencies
 | 
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.3.7, warning=FALSE, message=FALSE}
 ##################################
 # Creating the pre-modelling
@@ -873,6 +929,9 @@ PMA_PreModelling_Test <- PMA_Test_BoxCoxTransformed_CenteredScaledTransformed
 dim(PMA_PreModelling_Test)
 
 ```
+
+</details>
+
 ## 1.4 Data Exploration
 |
 | Exploratory data analysis:
@@ -890,6 +949,10 @@ dim(PMA_PreModelling_Test)
 |      **[A.10]** <span style="color: #FF0000">V49</span> variable (numeric)
 |      **[A.11]** <span style="color: #FF0000">V50</span> variable (numeric)
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.4, warning=FALSE, message=FALSE}
 ##################################
 # Loading dataset
@@ -921,6 +984,8 @@ featurePlot(x = EDA.Predictors.Numeric,
 
 ```
 
+</details>
+
 ## 1.5 Predictive Model Development and Hyperparameter Tuning
 ###  1.5.1 Support Vector Machine - Radial Basis Function Kernel - Manual Grid Search (SVM_R_MGS)
 |
@@ -942,6 +1007,9 @@ featurePlot(x = EDA.Predictors.Numeric,
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
 |
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.1, warning=FALSE, message=FALSE}
 ##################################
 # Transforming factor predictors
@@ -1040,6 +1108,8 @@ SVM_R_Test_GridSearch_Manual_ROC <- roc(response = SVM_R_Test_GridSearch_Manual$
 
 ```
 
+</details>
+
 ###  1.5.2 Support Vector Machine - Radial Basis Function Kernel - Automated Grid Search (SVM_R_AGS)
 |
 | [Support Vector Machine](https://dl.acm.org/doi/10.1145/130385.130401) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
@@ -1060,6 +1130,9 @@ SVM_R_Test_GridSearch_Manual_ROC <- roc(response = SVM_R_Test_GridSearch_Manual$
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
 |  
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.2, warning=FALSE, message=FALSE}
 ##################################
 # Using an automated grid search
@@ -1107,6 +1180,8 @@ SVM_R_Test_GridSearch_Auto_ROC <- roc(response = SVM_R_Test_GridSearch_Auto$SVM_
 (SVM_R_Test_GridSearch_Auto_ROCCurveAUC <- auc(SVM_R_Test_GridSearch_Auto_ROC)[1])
 ```
 
+</details>
+
 ###  1.5.3 Support Vector Machine - Radial Basis Function Kernel - Automated Random Search (SVM_R_ARS)
 |
 | [Support Vector Machine](https://dl.acm.org/doi/10.1145/130385.130401) plots each observation in an N-dimensional space corresponding to the number of features in the data set and finds a hyperplane that maximally separates the different classes by a maximally large margin (which is defined as the distance between the hyperplane and the closest data points from each class). The algorithm applies kernel transformation by mapping non-linearly separable data using the similarities between the points in a high-dimensional feature space for improved discrimination.
@@ -1126,7 +1201,10 @@ SVM_R_Test_GridSearch_Auto_ROC <- roc(response = SVM_R_Test_GridSearch_Auto$SVM_
 |
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
-| 
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.3, warning=FALSE, message=FALSE}
 ##################################
 # Using an automated random search
@@ -1175,6 +1253,8 @@ SVM_R_Test_RandomSearch_Auto_ROC <- roc(response = SVM_R_Test_RandomSearch_Auto$
 
 ```
 
+</details>
+
 ###  1.5.4 Regularized Discriminant Analysis - Manual Grid Search (RDA_MGS)
 |
 | [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. RDA introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
@@ -1194,6 +1274,10 @@ SVM_R_Test_RandomSearch_Auto_ROC <- roc(response = SVM_R_Test_RandomSearch_Auto$
 |
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.4, warning=FALSE, message=FALSE}
 ##################################
 # Creating a local object
@@ -1279,6 +1363,8 @@ RDA_Test_GridSearch_Manual_ROC <- roc(response = RDA_Test_GridSearch_Manual$RDA_
 (RDA_Test_GridSearch_Manual_ROCCurveAUC <- auc(RDA_Test_GridSearch_Manual_ROC)[1])
 ```
 
+</details>
+
 ###  1.5.5 Regularized Discriminant Analysis - Automated Grid Search (RDA_AGS)
 |
 | [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. RDA introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
@@ -1298,6 +1384,10 @@ RDA_Test_GridSearch_Manual_ROC <- roc(response = RDA_Test_GridSearch_Manual$RDA_
 |
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.5, warning=FALSE, message=FALSE}
 ##################################
 # Using an automated grid search
@@ -1345,6 +1435,8 @@ RDA_Test_GridSearch_Auto_ROC <- roc(response = RDA_Test_GridSearch_Auto$RDA_Obse
 (RDA_Test_GridSearch_Auto_ROCCurveAUC <- auc(RDA_Test_GridSearch_Auto_ROC)[1])
 ```
 
+</details>
+
 ###  1.5.6 Regularized Discriminant Analysis - Automated Random Search (RDA_ARS)
 |
 | [Regularized Discriminant Analysis](https://www.tandfonline.com/doi/abs/10.1080/01621459.1989.10478752) serves as a compromise between Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). LDA uses Bayes’ rule to determine the posterior probability that an observation belongs to a certain class. Due to the normal assumption of LDA, the posterior is defined by a multivariate Gaussian whose covariance matrix is assumed to be identical for all classes. New points are classified by computing the discriminant function (the enumerator of the posterior probability) and returning the class with the maximal value. The discriminant variables can be obtained through eigen-decompositions of the within-class and between-class variance. QDA is a variant of LDA in which an individual covariance matrix is estimated for every class of observations. QDA is particularly useful if there is prior knowledge that individual classes exhibit distinct covariances. Regularized Discriminant Analysis (RDA) introduces a regularization parameter that shrinks the separate covariance matrices of QDA towards a common LDA matrix. The parameter can take values from 0 (LDA) to 1 (QDA) and any value in between is a compromise between the two approaches, with the optimal hyperparameter value determined through cross-validation. Since RDA is a regularization technique, it is particularly useful when there are many features that are potentially correlated.
@@ -1364,6 +1456,10 @@ RDA_Test_GridSearch_Auto_ROC <- roc(response = RDA_Test_GridSearch_Auto$RDA_Obse
 | 
 | **[D]** The model does not allow for ranking of predictors in terms of variable importance.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.5.6, warning=FALSE, message=FALSE}
 ##################################
 # Using an automated random search
@@ -1411,6 +1507,8 @@ RDA_Test_RandomSearch_Auto_ROC <- roc(response = RDA_Test_RandomSearch_Auto$RDA_
 
 ```
 
+</details>
+
 ## 1.6 Hyperparameter Tuning Evaluation Summary
 |
 | Model performance comparison:
@@ -1421,6 +1519,10 @@ RDA_Test_RandomSearch_Auto_ROC <- roc(response = RDA_Test_RandomSearch_Auto$RDA_
 |      **[A.2]** Hyperparameters tuned using **SVM_R_ARS: Support Vector Machine - Radial Basis Function Kernel - Automated Random Search** (<mark style="background-color: #CCECFF">**kernlab**</mark> packages)
 |             **[A.2.1]** Cross-Validation ROC Curve AUC = 0.96213, Test ROC Curve AUC = 0.93541 
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.6, warning=FALSE, message=FALSE}
 
 ##################################
@@ -1551,6 +1653,7 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 
 ```
 
+</details>
 
 ## 1.7 Resampling Distribution Evaluation Summary
 |
@@ -1560,6 +1663,10 @@ print(ROCCurveAUC_Summary, row.names=FALSE)
 |
 | **[B]** No statistically significant differences in the ROC Curve AUC metrics were observed between models and hyperparameter tuning strategies, although the **SVM_R_MGS: Support Vector Machine - Radial Basis Function Kernel - Manual Grid Search** model demonstrated the lowest p-values (between 0.10 to 0.14) when specifically compared to the **RDA_MGS: Regularized Discriminant Analysis - Manual Grid Search**, **RDA_AGS: Regularized Discriminant Analysis - Automated Grid Search** and **RDA_ARS: Regularized Discriminant Analysis - Automated Random Search** models.
 |
+|
+
+<details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
+
 ```{r section_1.7, warning=FALSE, message=FALSE}
 ##################################
 # Consolidating the resampling results
@@ -1608,6 +1715,8 @@ bwplot(ResamplingDifferences,
        layout=c(3,1))
 
 ```
+
+</details>
 
 # **2. References**
 |
