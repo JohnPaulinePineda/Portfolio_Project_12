@@ -1,5 +1,5 @@
 ---
-title: 'R : Evaluating Hyperparameter Tuning Strategies and Resampling Distributions'
+title: 'Supervised Learning : Evaluating Hyperparameter Tuning Strategies and Resampling Distributions'
 author: "John Pauline Pineda"
 date: "December 6, 2022"
 output: 
