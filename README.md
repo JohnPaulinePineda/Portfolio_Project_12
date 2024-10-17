@@ -4,4 +4,4 @@
 
 This [project](https://johnpaulinepineda.github.io/Portfolio_Project_12/) implements various evaluation procedures for hyperparameter tuning strategies and resampling distributions. Using Support Vector Machine and Regularized Discriminant Analysis model structures, methods applied in the analysis to implement hyperparameter tuning included the Manual Grid Search, Automated Grid Search and Automated Random Search with the hyperparameter selection process illustrated for each. The resulting predictions derived from the candidate models applying various hyperparameter tuning procedures were evaluated in terms of their discrimination power using the area under the receiver operating characteristics curve (AUROC) metric.
 
-<img src="docs/Project12_Summary.png?raw=true"/>
+<img src="images/Project12_Summary.png?raw=true"/>
